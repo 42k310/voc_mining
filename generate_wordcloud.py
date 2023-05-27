@@ -29,21 +29,7 @@ for file in files:
             max_words = 100 # 表示する最大単語数
             ).generate(text)
 
-        if n == 1:
-            output_name = 'cs_n.png'
-        elif n == 2:
-            output_name = 'cs_p.png'
-        elif n == 3:
-            output_name = 'cs_s.png'
-        elif n == 4:
-            output_name = 'gmo_n.png'
-        elif n == 5:
-            output_name = 'gmo_p.png'
-        elif n == 6:
-            output_name = 'gmo_s.png'
-        else:
-            output_name = 'else.png'
-
+        output_name = str(n) + '.png'
         plt.figure(figsize=(10, 5))
         plt.imshow(wc, interpolation='bilinear')
         plt.axis('off')
