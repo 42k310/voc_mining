@@ -21,7 +21,7 @@ CSV.open(csv_file, 'w') do |csv|
   csv << ['Month', 'Title', 'Content']
 
   # ページごとにループ
-  (1..NUM_PAGE).each do |page|
+  (1..PAGE_NUM).each do |page|
     puts url = "#{base_url}?page=#{page}"
 
     html = open(url)
