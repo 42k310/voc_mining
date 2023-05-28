@@ -13,7 +13,8 @@ base_url = gets.chomp.to_s
 
 p '取得するレビュータイプを選択してください（p / n / s）'
 type = gets.chomp.to_s
-csv_file = 'reviews_' + type + '_' + DateTime.now.strftime('%Y%m%d%H%M%S') + '.csv'
+path = 'result_scraping/'
+csv_file = path + 'reviews_' + type + '_' + DateTime.now.strftime('%Y%m%d%H%M%S') + '.csv'
 
 
 # 本処理
